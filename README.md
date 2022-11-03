@@ -1,5 +1,6 @@
 # PokemonCoverageCalculator
 This is a tool to help you calculate the coverage of your team
+
 https://coveragecalculator.raltech.us
 
 There is still much to do, but the app is functionnal for now. Planned features include but are not limited to:
