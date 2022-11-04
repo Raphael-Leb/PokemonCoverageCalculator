@@ -105,9 +105,11 @@ def receives_resist_from_multiple_types(team):
         for type in mon:
             resists.extend(receives_resist_from(type))
             vulnerable.extend(receives_super_from(type))
-    for i in resists:
-        if i not in vulnerable:
-            final.append(i)
+        for i in resists:
+            if i not in vulnerable:
+                final.append(i)
+        vulnerable = []
+        resists = []
     return(final)
 
 # ---------------------- Returns a list of all types from which defender list is vulnerable to attacks  ---------------------------
@@ -120,9 +122,11 @@ def receives_super_from_multiple_types(team):
             vulnerable.extend(receives_super_from(type))
             resists.extend(receives_resist_from(type))
             resists.extend(receives_immune_from(type))
-    for i in vulnerable:
-        if i not in resists:
-            final.append(i)
+        for i in vulnerable:
+            if i not in resists:
+                final.append(i)
+        vulnerable = []
+        resists = []
     return(final)
 
 # ---------------------- Returns a list of all types from which defender list is immune to attacks  ---------------------------
