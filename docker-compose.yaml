@@ -1,8 +1,14 @@
 version: '3'
 services:
-  streamlit_app:
+  pokemon_coverage_calculator:
     build: .
     volumes:
       - .:/app
     ports:
       - 8501:8501
+refactor:
+  python_version: '3.9'
+  skip:
+    - assign-if-exp
+    - merge-dict-assign
+    - inline-immediately-returned-variable
