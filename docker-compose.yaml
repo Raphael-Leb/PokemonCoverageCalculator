@@ -6,9 +6,3 @@ services:
       - .:/app
     ports:
       - 8501:8501
-refactor:
-  python_version: '3.9'
-  skip:
-    - assign-if-exp
-    - merge-dict-assign
-    - inline-immediately-returned-variable
