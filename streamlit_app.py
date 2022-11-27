@@ -67,5 +67,5 @@ fig2 = px.histogram(blind_to_df, x="Type", y="Times", color="Type",color_discret
 fig3 = px.histogram(weak_to_df, x="Type", y="Times", color="Type",color_discrete_map=colors,  title="Types that you receive super effective damage from")
 
 fig
-fig2
 fig3
+fig2
