@@ -12,36 +12,43 @@ This is a tool to help you calculate the coverage of your team. It will show you
 st.write("## Enter your team below")
 
 # ------------------------------------------------------- Pokemon Team Input -------------------------------------------------------
-mon1_type1 = st.selectbox("Select first pokemon's type", key=1, options = (types.index.values), index = 18)
-mon1_type2 = st.selectbox("Second type",key=2, options = (types.index.values), index = 18)
-mon1 = [mon1_type1,mon1_type2]
-st.image([str_to_class(mon1_type1),str_to_class(mon1_type2)])
+col1, col2, col3, col4, col5, col6 = st.columns(6)
 
-mon2_type1 = st.selectbox("Select second pokemon's type",key=3, options = (types.index.values), index = 18)
-mon2_type2 = st.selectbox("Second type",key=4, options = (types.index.values), index = 18)
-mon2 = [mon2_type1,mon2_type2]
-st.image([str_to_class(mon2_type1),str_to_class(mon2_type2)])
+with col1:
+    mon1_type1 = st.selectbox("Select first pokemon's type", key=1, options = (types.index.values), index = 18)
+    mon1_type2 = st.selectbox("Second type",key=2, options = (types.index.values), index = 18)
+    mon1 = [mon1_type1,mon1_type2]
+    st.image([str_to_class(mon1_type1),str_to_class(mon1_type2)])
 
-mon3_type1 = st.selectbox("Select third pokemon's type",key=5, options = (types.index.values), index = 18)
-mon3_type2 = st.selectbox("Second type",key=6, options = (types.index.values), index = 18)
-mon3 = [mon3_type1,mon3_type2]
-st.image([str_to_class(mon3_type1),str_to_class(mon3_type2)])
+with col2:
+    mon2_type1 = st.selectbox("Select second pokemon's type",key=3, options = (types.index.values), index = 18)
+    mon2_type2 = st.selectbox("Second type",key=4, options = (types.index.values), index = 18)
+    mon2 = [mon2_type1,mon2_type2]
+    st.image([str_to_class(mon2_type1),str_to_class(mon2_type2)])
 
-mon4_type1 = st.selectbox("Select fourth pokemon's type",key=7, options = (types.index.values), index = 18)
-mon4_type2 = st.selectbox("Second type",key=8, options = (types.index.values), index = 18)
-mon4 = [mon4_type1,mon4_type2]
-st.image([str_to_class(mon4_type1),str_to_class(mon4_type2)])
+with col3:
+    mon3_type1 = st.selectbox("Select third pokemon's type",key=5, options = (types.index.values), index = 18)
+    mon3_type2 = st.selectbox("Second type",key=6, options = (types.index.values), index = 18)
+    mon3 = [mon3_type1,mon3_type2]
+    st.image([str_to_class(mon3_type1),str_to_class(mon3_type2)])
 
-mon5_type1 = st.selectbox("Select fifth pokemon's type",key=9, options = (types.index.values), index = 18)
-mon5_type2 = st.selectbox("Second type",key=10, options = (types.index.values), index = 18)
-mon5 = [mon5_type1,mon5_type2]
-st.image([str_to_class(mon5_type1),str_to_class(mon5_type2)])
+with col4:
+    mon4_type1 = st.selectbox("Select fourth pokemon's type",key=7, options = (types.index.values), index = 18)
+    mon4_type2 = st.selectbox("Second type",key=8, options = (types.index.values), index = 18)
+    mon4 = [mon4_type1,mon4_type2]
+    st.image([str_to_class(mon4_type1),str_to_class(mon4_type2)])
 
-mon6_type1 = st.selectbox("Select sixth pokemon's type",key=11, options = (types.index.values), index = 18)
-mon6_type2 = st.selectbox("Second type",key=12, options = (types.index.values), index = 18)
-mon6 = [mon6_type1,mon6_type2]
+with col5:
+    mon5_type1 = st.selectbox("Select fifth pokemon's type",key=9, options = (types.index.values), index = 18)
+    mon5_type2 = st.selectbox("Second type",key=10, options = (types.index.values), index = 18)
+    mon5 = [mon5_type1,mon5_type2]
+    st.image([str_to_class(mon5_type1),str_to_class(mon5_type2)])
 
-st.image([str_to_class(mon6_type1),str_to_class(mon6_type2)])
+with col6:
+    mon6_type1 = st.selectbox("Select sixth pokemon's type",key=11, options = (types.index.values), index = 18)
+    mon6_type2 = st.selectbox("Second type",key=12, options = (types.index.values), index = 18)
+    mon6 = [mon6_type1,mon6_type2]
+    st.image([str_to_class(mon6_type1),str_to_class(mon6_type2)])
 
 team = [mon1,mon2,mon3,mon4,mon5,mon6]
 
